@@ -59,7 +59,6 @@ class DiaAdapter(LogicAdapter):
   def obter_dia(self, mensagem):
     if 'hoje' in mensagem.lower():
       dia = date.today().weekday() + 2
-      print(dia)
       return str(dia if dia < 8 else 1)
     
     if 'amanhã' in mensagem.lower() or 'amanha' in mensagem.lower():

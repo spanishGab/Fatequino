@@ -15,14 +15,11 @@ class FatequinoChatbot():
         return self.trainer.train(conversa)
 
     def mensagemEnviada(self, mensagemRecebida):
-        print(mensagemRecebida)
         # verifica se o bot consegue responder a mensagem
         if ( float(self.bot.get_response(mensagemRecebida).confidence) > 0.5):
-            print('show')
             return self.bot.get_response(mensagemRecebida)
         # verifica se o bot sabe responder com as conversas registradas no arquivo conversas.json    
         if mensagemRecebida in self.conversas:
-            print('show')
             return self.bot.get_response(mensagemRecebida)
         else:
             # grava as conversas que o bot nao sabe responder em um arquivo
