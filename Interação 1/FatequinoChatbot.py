@@ -2,6 +2,8 @@ from pymongo import MongoClient
 from flask import send_file
 import json
 
+ 
+
 # classe que trata as mensagens
 class FatequinoChatbot():
     def __init__(self, bot, Trainer):
@@ -11,8 +13,12 @@ class FatequinoChatbot():
         self.conversas = json.loads(open('conversas.json', 'r').read())
         self.conversasDesconhecidas = []
 
+ 
+
     def treinarBot(self, conversa):
         return self.trainer.train(conversa)
+
+ 
 
     def mensagemEnviada(self, mensagemRecebida):
         # verifica se o bot consegue responder a mensagem
@@ -21,13 +27,15 @@ class FatequinoChatbot():
         # verifica se o bot sabe responder com as conversas registradas no arquivo conversas.json    
         if mensagemRecebida in self.conversas:
             return self.bot.get_response(mensagemRecebida)
-        else:
-            # grava as conversas que o bot nao sabe responder em um arquivo
-            if not (mensagemRecebida in self.conversas):
-                self.conversasDesconhecidas.append(mensagemRecebida)
-                with open('conversasSemResposta.json', 'w', encoding='utf-8') as gravarConversa:
-                    json.dump(self.conversasDesconhecidas, gravarConversa, ensure_ascii=False, indent=4, separators=(',', ':'))
-                return "Ainda não sei te responder sobre isso, mas irei pesquisar para conseguir te responder."
+       
+        # grava as conversas que o bot nao sabe responder em um arquivo
+        if not (mensagemRecebida in self.conversas):
+            self.conversasDesconhecidas.append(mensagemRecebida)
+            with open('conversasSemResposta.json', 'w', encoding='utf-8') as gravarConversa:
+                json.dump(self.conversasDesconhecidas, gravarConversa, ensure_ascii=False, indent=4, separators=(',', ':'))
+            return "Ainda não sei te responder sobre isso, mas irei pesquisar para conseguir te responder."
+
+ 
 
     # carrega dados inseridos pelo postman no banco de dados mongoDB
     def setHorarios(self, data):
