@@ -82,7 +82,7 @@ To insert updated information about Fatec in the ChatBot's database, you'll have
 
 setup(
     name = 'fatequino_chatbot',
-    version = '1.0.1',
+    version = '1.0.2',
     author = 'Interacao I - FATEC - 6o sem ADS Noturno',
     author_email = 'gabriel.santos231@fatec.sp.gov.br',
     description = 'Chatbot of Fatequino robot, which objective is to interact with students, teachers and visitors at FATEC Carapicuíba in order to give them information about teachers location, classrooms and schedules.',
