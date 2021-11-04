@@ -92,3 +92,8 @@ Feito isso, a aplicação será iniciada e poderá ser acessada no endereço: `l
 
 Pronto, seguindo estes passos o bot já terá acesso as informações.
 =======
+
+
+# Vídeo demonstrativo
+
+O link a seguir leva para um vídeo onde é possível ver uma demonstração completa do projeto funcionando: https://www.youtube.com/watch?v=X33TMoHZzZo&list=PL-vxwN0gnrOu9jyA3wFWFJdjnTrME5EtF

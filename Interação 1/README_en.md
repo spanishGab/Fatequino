@@ -25,7 +25,7 @@ To install it, you can follow the instructions at its official website: [Install
 
 Along with Python, you'll have the `pip` tool installed. This tool is used to manage Python application's dependencies.
 
-## Execução
+## Execution
 
 Start your MongoDB instance at the port `27017`.
 
@@ -73,3 +73,8 @@ To insert updated information about Fatec in the ChatBot's database, you'll have
 3. In the space below, insert the JSON appendix found in the classes.json file inside the project's "Interaction 1" directory
 
 4. Click the "Send" button to send the data to the MongoDB database.
+
+
+# Demonstration Video
+
+The following link will take you into a video where you will se an entire demonstration of the working project: https://www.youtube.com/watch?v=X33TMoHZzZo&list=PL-vxwN0gnrOu9jyA3wFWFJdjnTrME5EtF
