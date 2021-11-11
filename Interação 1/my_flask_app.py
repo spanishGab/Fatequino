@@ -40,35 +40,6 @@ fatequinoChatbot.treinarBot("chatterbot.corpus.portuguese")
 trainer.train(trainn)
 
 
-#rota que carrega a pagina inicial do bot
-@app.route("/", methods=['GET'])
-def home():
-    return render_template("index.html")
-
-#rota que pega a mensagem inserida pelo usuário e remove pontuações e acentos 
-@app.route("/get", methods=['GET'])
-def get_bot_response():
-    userText = request.args.get('msg')
-    userText = remove_pontuacao(userText)
-    userText = remove_acentos(userText)
-    return str(fatequinoChatbot.mensagemEnviada(userText))
-
-#rota para inserir os dados referentes as aulas via postman
-@app.route("/aulasInfo", methods=['POST'])
-def post_aulas_info():
-    data = request.get_json()
-    fatequinoChatbot.setHorarios(data)
-    return jsonify({"status":"sucesso"})
-
-@app.route("/horarioLocal", methods=['POST'])
-def post_locais_info():
-    data = request.get_json()
-    fatequinoChatbot.setHorariosLocais(data)
-    return jsonify({"status":"sucesso"})
-
-if __name__ == "__main__":
-    app.run()
-
 def remove_pontuacao(texto):
     texto_sem_pontuacao = texto
     remover = "!@#$%¨&*()_-+={[}]:;?/\|"
@@ -105,3 +76,32 @@ def remove_acentos(texto):
 
     return texto_sem_acento
  
+
+#rota que carrega a pagina inicial do bot
+@app.route("/", methods=['GET'])
+def home():
+    return render_template("index.html")
+
+#rota que pega a mensagem inserida pelo usuário e remove pontuações e acentos 
+@app.route("/get", methods=['GET'])
+def get_bot_response():
+    userText = request.args.get('msg')
+    userText = remove_pontuacao(userText)
+    userText = remove_acentos(userText)
+    return str(fatequinoChatbot.mensagemEnviada(userText))
+
+#rota para inserir os dados referentes as aulas via postman
+@app.route("/aulasInfo", methods=['POST'])
+def post_aulas_info():
+    data = request.get_json()
+    fatequinoChatbot.setHorarios(data)
+    return jsonify({"status":"sucesso"})
+
+@app.route("/horarioLocal", methods=['POST'])
+def post_locais_info():
+    data = request.get_json()
+    fatequinoChatbot.setHorariosLocais(data)
+    return jsonify({"status":"sucesso"})
+
+if __name__ == "__main__":
+    app.run()
