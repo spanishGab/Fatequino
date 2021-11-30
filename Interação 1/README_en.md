@@ -42,7 +42,8 @@ Using a command line tool access the chatbot's directory, for example:
 * On Linux: `$HOME/fatequino/Interação\ 1/`
 
 
-Instaçç the applications dependencies running this command on the command line: `pip install -r requirements.txt`. In case of error, maybe you should try to install the dependencies one by one.
+
+Install the applications dependencies running this command on the command line: `pip install -r requirements.txt`. In case of error, maybe you should try to install the dependencies one by one.
 
 > Note: Maybe you'll have to run the command above as system administrator (super user).
 

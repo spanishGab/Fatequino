@@ -35,14 +35,14 @@ Start your MongoDB instance at the port `27017`.
 
 Download or clone this repository (using the Git tool) and place it in a directory of your preference. For example:
 
-* On Windows: `c:\fatequino`
+* On Windows: `c:\\fatequino`
 * On Linux: `$HOME/fatequino`
 
 Create an environment variable named `FLASK_APP` contaning the value `my_flask_app.py`
 
 Using a command line tool access the chatbot's directory, for example:
 
-* On Windows: `c:\fatequino\Interação 1`
+* On Windows: `c:\\fatequino\Interação 1`
 * On Linux: `$HOME/fatequino/Interação\ 1/`
 
 
