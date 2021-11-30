@@ -29,7 +29,7 @@ To install it, you can follow the instructions at its official website: [Install
 
 Along with Python, you'll have the `pip` tool installed. This tool is used to manage Python application's dependencies.
 
-## Execução
+## Execution
 
 Start your MongoDB instance at the port `27017`.
 
