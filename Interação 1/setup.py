@@ -85,7 +85,7 @@ The following link will take you into a video where you will se an entire demons
 
 setup(
     name = 'fatequino_chatbot',
-    version = '1.0.4',
+    version = '1.0.5',
     author = 'Interacao I - FATEC - 6o sem ADS Noturno',
     author_email = 'gabriel.santos231@fatec.sp.gov.br',
     description = 'Chatbot of Fatequino robot, which objective is to interact with students, teachers and visitors at FATEC Carapicuíba in order to give them information about teachers location, classrooms and schedules.',
